@@ -54,4 +54,4 @@ gulp.task('watch', function(){
 })
 
 //Run all tasks
-gulp.task('default',['copyHtml','imageMin','uglify','sass','watch']);
+gulp.task('default',['copyHtml','imageMin','minify','sass','watch']);
