@@ -48,7 +48,9 @@ gulp.task('sass', function(done){
 //Watch for changes
 gulp.task('watch', function(){
     gulp.watch('src/js/*.js',['minify']);
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.watch('src/scss/**/*.scss', ['sass']);
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 })
 
 //Run all tasks
