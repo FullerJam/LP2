@@ -2,110 +2,177 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
-  <script src="/node_modules/material-design-lite/material.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="animate.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css\skeleton.css">
+    <link rel="stylesheet" href="css\normalize.css">
+    <link rel="stylesheet" href="css\animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <title>Landing Page</title>
 </head>
+<style>
+    .hero {
+        background-color: yellow;
+        font-weight: bold;
+    }
+
+    .pink {
+        background-color: pink;
+    }
+
+    .blue {
+        background-color: teal;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .title {
+        padding-bottom: 7rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+
+    }
+    
+    .subheading{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 3em;
+    }
+
+    .section {
+        height: 100vh;
+        padding: 4rem 0 7rem;
+        text-align: center;
+    }
+
+    .section2 {
+        height: 100vh;
+        padding: 50vh 0 7rem;
+        text-align: center;
+        color: white;
+    }
+
+    .section3 {
+        height: 100vh;
+        padding: 50vh 0 7rem;
+        text-align: center;
+    }
+
+    .section4 {
+        height: 100vh;
+        padding: 50vh 0 7rem;
+        color: white;
+    }
+
+    i {
+        padding-right: 10px;
+    }
+
+    .ski {
+        max-height: 400px;
+    }
+</style>
 
 <body>
 
-  <!-- Uses a transparent header that draws on top of the layout's background -->
-  <style>
-    .demo-layout-transparent {
-      background: url('https://images.pexels.com/photos/416821/pexels-photo-416821.jpeg') center / cover;
-
-    }
-
-    .demo-layout-transparent .mdl-layout__header,
-    .demo-layout-transparent .mdl-layout__drawer-button {
-      /* This background is dark, so we set text to white. Use 87% black instead if
-         your background is light. */
-      color: #f2f2f2;
-    }
-  </style>
-
-  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">
-          <h3></h3>
-        </span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-
-        <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Past</a>
-          <a class="mdl-navigation__link" href="">Present</a>
-          <a class="mdl-navigation__link" href="">Future</a>
-        </nav>
-
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">All about me</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Past</a>
-        <a class="mdl-navigation__link" href="">Present</a>
-        <a class="mdl-navigation__link" href="">Future</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-    </main>
-
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--4-col"></div>
-      <div class="mdl-cell mdl-cell--4-col">
-        <h1 style="font-family: 'Ubuntu', sans-serif; color:#f4f4f4; text-align:center; margin-top:0;">text</h1>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col"></div>
-    </div>
-  </div>
-
-
-  <!-- MAIN -->
-  <main class="mdl-layout__content">
-
-    <div class="page-content" style="margin-top:620px;">
-      <!-- Grid start -->
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--3-col">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          corrupti a quo quod deleniti rerum accusantium in totam architecto natus voluptatem sunt voluptate nihil
-          quaerat harum quibusdam beatae, deserunt ullam.</div>
-        <div class="mdl-cell mdl-cell--3-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          incidunt, obcaecati, rerum ad non eos aliquam quibusdam aperiam, modi laudantium quis ducimus ullam excepturi
-          sequi consequatur! Sequi explicabo a quia.</div>
-        <div class="mdl-cell mdl-cell--3-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. At provident
-          fuga nemo et animi expedita, eius hic harum ab iure similique ut aut eligendi doloribus praesentium
-          asperiores tempora qui quasi.</div>
-        <div class="mdl-cell mdl-cell--3-col">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nobis sed
-          hic autem placeat, laborum est culpa, quia delectus distinctio voluptas repellendus? Similique maxime,
-          praesentium consequatur incidunt perspiciatis consectetur quae?</div>
-      </div>
+    <div class="section hero">
+        <div class="container">
+            <div class="row">
+                <div class="one-third column">
+                    <h4></h4>
+                </div>
+                <div class="one-third column">
+                    <img src="images\Mask Group.png" alt="my face" class="hero-img animated jackInTheBox">
+                </div>
+                <div class="one-third column"></div>
+            </div>
+            <div class="row">
+                <div class="one-third column">
+                    <h4></h4>
+                </div>
+                <div class="one-third column title">
+                    <h1 class="animated slideInRight">Technology Consultant James Fuller</h1>
+                </div>
+                <div class="one-third column">
+                    <h4></h4>
+                </div>
+            </div>
+        </div>
     </div>
 
-  </main>
-  <!-- footer -->
-  <footer class="mdl-mini-footer">
-    <div class="mdl-mini-footer__left-section">
-      <div class="mdl-logo">Title</div>
-      <ul class="mdl-mini-footer__link-list">
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Privacy & Terms</a></li>
-      </ul>
-    </div>
-  </footer>
 
+    <div class="section2 blue">
+        <div class="container">
+
+            <div class="row">
+                <div class="one-fourth column">
+                    <h4>Familiar with a range of coding languages, frameworks and build tools</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="one-fourth column languages">
+                    <div class="container">
+                        <i class="fab fa-js fa-5x animated flip"></i>
+                        <i class="fab fa-css3-alt fa-5x animated flip"></i>
+                        <i class="fab fa-php fa-5x animated flip"></i>
+                        <i class="fab fa-sass fa-5x animated flip"></i>
+                        <i class="fab fa-gulp fa-5x animated flip"></i>
+                        <i class="fab fa-html5 fa-5x animated flip"></i>
+                        <i class="fab fa-vuejs fa-5x animated flip"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3 pink">
+        <div class="container">
+
+            <div class="row">
+                <div class="one-fourth column">
+                    <h4>Interests</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="one-fourth column">
+                    <div class="container">
+                        <i class="fas fa-bicycle fa-5x animated flip"></i>
+                        <i class="far fa-map fa-5x animated flip"></i>
+                        <i class="fas fa-basketball-ball fa-5x animated flip"></i>
+                        <i class="fas fa-book-open fa-5x animated flip"></i>
+                        <i class="fas fa-snowflake fa-5x animated flip"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section4 orange">
+        <div class="container">
+
+            <div class="row">
+                <div class="one-fourth column">
+                    <h4 class="subheading">You might not have known..</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="one-half column">
+                    <img src="images\skifinal.png" alt="Ski images" class="ski">
+                </div>
+                <div class="one-half column">
+                        <i class="fas fa-snowflake fa-5x animated flip"></i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero saepe neque veritatis
+                    exercitationem autem. Molestiae ex laborum unde eum optio inventore. Reprehenderit quaerat quo
+                    accusantium molestias perspiciatis nostrum corrupti laborum.
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="material.min.js"></script>
 
 </html>
