@@ -15,6 +15,10 @@
     <title>Landing Page</title>
 </head>
 <style>
+    body {
+        transition: ease;
+    }
+
     .hero {
         background-color: yellow;
     }
@@ -28,7 +32,12 @@
     }
 
     .orange {
-        background-color: orange;
+        background-image: url("https://images.pexels.com/photos/238619/pexels-photo-238619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
+    }
+
+    .orange {
+        color: #222233;
     }
 
     .title {
@@ -51,21 +60,20 @@
 
     .section2 {
         height: 70vh;
-        padding: 50vh 0 7rem;
+        padding: 35vh 0 7rem;
         text-align: center;
         color: white;
     }
 
     .section3 {
         height: 70vh;
-        padding: 50vh 0 7rem;
+        padding: 35vh 0 7rem;
         text-align: center;
     }
 
     .section4 {
         height: 70vh;
-        padding: 50vh 0 7rem;
-        color: white;
+        padding: 20vh 0 35vh;
     }
 
     i {
@@ -80,6 +88,19 @@
         font-weight: 900;
     }
 
+    .weight ul li {
+        list-style-type: square;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fa-snowflake {
+        position: absolute;
+        color: white;
+        left: 60%;
+        top: 20%;
+    }
+
     .fa-crown {
         position: absolute;
         left: 240px;
@@ -87,6 +108,10 @@
         transform: rotate(20deg);
         z-index: 1;
         color: gold;
+    }
+
+    .mainimg {
+        position: relative;
     }
 
     @media (max-width: 1050px) {
@@ -121,11 +146,37 @@
 
     @media (max-width: 700px) {
         .fa-crown {
-            left: 150px;
+            left: 130px;
         }
     }
-    .mainimg {
-        position: relative;
+
+    @media (max-width: 550px) {
+        .fa-crown {
+            left: 220px;
+        }
+    }
+
+    @media (max-width: 470px) {
+        .fa-crown {
+            left: 180px;
+        }
+    }
+
+    @media (max-width: 410px) {
+        .fa-crown {
+            left: 180px;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .fa-crown {
+            left: 140px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
     }
 
     /* COUNTER STYLING */
@@ -156,7 +207,8 @@
                     <img src="images\Mask Group.png" alt="my face" class="hero-img animated jackInTheBox">
                 </div>
                 <div class="one-half column title">
-                    <h1 class="animated slideInRight weight">Technology Consultant Developer <br> James Fuller</h1>
+                    <h1 class="animated slideInRight weight">James Fuller</h1>
+                    <h2>Technology Consultant Developer</h2>
                 </div>
             </div>
 
@@ -170,7 +222,7 @@
 
             <div class="row">
                 <div class="one-fourth column">
-                    <h4>Familiar with a range of coding languages, frameworks and build tools</h4>
+                    <h4>Familiar with a range of coding languages, frameworks, preprocessors and build tools</h4>
                 </div>
             </div>
             <div class="row">
@@ -210,7 +262,7 @@
                             <p id="seconds">00</p>
                             <p class="timeRefSeconds">seconds</p>
                         </div>
-                        <p class="weight title">Since I started at Clever-Touch Marketing</p>
+                        <p class="title weight">Since I started at Clever-Touch Marketing</p>
                     </div>
                 </div>
             </div>
@@ -222,18 +274,31 @@
 
             <div class="row">
                 <div class="one-fourth column">
-                    <h4 class="subheading">You might not have known..</h4>
+                    <h1 class="weight">You might not have known..</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="one-half column">
+                <div class="one-half column mainimg">
                     <img src="images\skifinal.png" alt="Ski images" class="ski">
                 </div>
-                <div class="one-half column">
-                    <i class="fas fa-snowflake fa-5x animated flip"></i>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero saepe neque veritatis
-                    exercitationem autem. Molestiae ex laborum unde eum optio inventore. Reprehenderit quaerat quo
-                    accusantium molestias perspiciatis nostrum corrupti laborum.
+                <div class="one-half column weight fade">
+                    <p>I'm fortunate enough to have skied three seasons working for various companies in the Alps,
+                        Rockies and Dolomites. <br>Resorts skied Include:</p>
+                    <ul>
+                        <li>Courchevel</li>
+                        <li>Meribel</li>
+                        <li>Val Thoren</li>
+                        <li>Val Morel</li>
+                        <li>La Rosiere</li>
+                        <li>Pila</li>
+                        <li>La Thuile</li>
+                        <li>Courmayeur</li>
+                        <li>Lech</li>
+                        <li>Zell am See</li>
+                        <li>Banff</li>
+                        <li>Lake Louise</li>
+                        <li>Kicking Horse</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -268,6 +333,48 @@
         clearTimeout(upTime.to);
         upTime.to = setTimeout(function () { upTime(countTo); }, 1000);
     }
+
+
+    function onViewport(el, elClass, offset, callback) {
+        /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
+        var didScroll = false;
+        var this_top;
+        var height;
+        var top;
+
+        if (!offset) { var offset = 0; }
+
+        $(window).scroll(function () {
+            didScroll = true;
+        });
+
+        setInterval(function () {
+            if (didScroll) {
+                didScroll = false;
+                top = $(this).scrollTop();
+
+                $(el).each(function (i) {
+                    this_top = $(this).offset().top - offset;
+                    height = $(this).height();
+
+                    // Scrolled within current section
+                    if (top >= this_top && !$(this).hasClass(elClass)) {
+                        $(this).addClass(elClass);
+
+                        if (typeof callback == "function") callback(el);
+                    }
+                });
+            }
+        }, 100);
+    }
+
+    // Call the function with the following parameters:
+    onViewport(selector, classNameToBeAdded, offset, callback);
+
+    // Example:
+    onViewport(".animated", "active", 300, function () {
+        console.log("This is not a drill.")
+    });
 
 </script>
 
