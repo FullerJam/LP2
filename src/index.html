@@ -17,7 +17,6 @@
 <style>
     .hero {
         background-color: yellow;
-        font-weight: bold;
     }
 
     .pink {
@@ -38,33 +37,33 @@
         font-size: 2em;
 
     }
-    
-    .subheading{
+
+    .subheading {
         font-family: 'Ubuntu', sans-serif;
         font-size: 3em;
     }
 
     .section {
-        height: 100vh;
-        padding: 4rem 0 7rem;
+        height: 70vh;
+        padding: 30vh 0 7rem;
         text-align: center;
     }
 
     .section2 {
-        height: 100vh;
+        height: 70vh;
         padding: 50vh 0 7rem;
         text-align: center;
         color: white;
     }
 
     .section3 {
-        height: 100vh;
+        height: 70vh;
         padding: 50vh 0 7rem;
         text-align: center;
     }
 
     .section4 {
-        height: 100vh;
+        height: 70vh;
         padding: 50vh 0 7rem;
         color: white;
     }
@@ -76,33 +75,93 @@
     .ski {
         max-height: 400px;
     }
+
+    .weight {
+        font-weight: 900;
+    }
+
+    .fa-crown {
+        position: absolute;
+        left: 240px;
+        top: -70px;
+        transform: rotate(20deg);
+        z-index: 1;
+        color: gold;
+    }
+
+    @media (max-width: 1050px) {
+        .fa-crown {
+            left: 220px;
+        }
+    }
+
+    @media (max-width: 950px) {
+        .fa-crown {
+            left: 200px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .fa-crown {
+            left: 170px;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .fa-crown {
+            left: 180px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .fa-crown {
+            left: 180px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .fa-crown {
+            left: 150px;
+        }
+    }
+    .mainimg {
+        position: relative;
+    }
+
+    /* COUNTER STYLING */
+    #countup {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #countup p {
+        display: inline-block;
+        padding: 10px;
+        background: #151515;
+        margin: 0 0 20px;
+        border-radius: 3px;
+        color: white;
+        min-width: 2.6rem;
+    }
 </style>
 
 <body>
 
     <div class="section hero">
         <div class="container">
+
             <div class="row">
-                <div class="one-third column">
-                    <h4></h4>
-                </div>
-                <div class="one-third column">
+                <div class="one-half column mainpic">
+                    <i class="fas fa-crown fa-5x"></i>
                     <img src="images\Mask Group.png" alt="my face" class="hero-img animated jackInTheBox">
                 </div>
-                <div class="one-third column"></div>
-            </div>
-            <div class="row">
-                <div class="one-third column">
-                    <h4></h4>
-                </div>
-                <div class="one-third column title">
-                    <h1 class="animated slideInRight">Technology Consultant James Fuller</h1>
-                </div>
-                <div class="one-third column">
-                    <h4></h4>
+                <div class="one-half column title">
+                    <h1 class="animated slideInRight weight">Technology Consultant Developer <br> James Fuller</h1>
                 </div>
             </div>
+
         </div>
+    </div>
     </div>
 
 
@@ -135,17 +194,23 @@
 
             <div class="row">
                 <div class="one-fourth column">
-                    <h4>Interests</h4>
+                    <h4 class="weight">It's Been</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="one-fourth column">
                     <div class="container">
-                        <i class="fas fa-bicycle fa-5x animated flip"></i>
-                        <i class="far fa-map fa-5x animated flip"></i>
-                        <i class="fas fa-basketball-ball fa-5x animated flip"></i>
-                        <i class="fas fa-book-open fa-5x animated flip"></i>
-                        <i class="fas fa-snowflake fa-5x animated flip"></i>
+                        <div id="countup">
+                            <p id="days">00</p>
+                            <p class="timeRefDays">days</p>
+                            <p id="hours">00</p>
+                            <p class="timeRefHours">hours</p>
+                            <p id="minutes">00</p>
+                            <p class="timeRefMinutes">minutes</p>
+                            <p id="seconds">00</p>
+                            <p class="timeRefSeconds">seconds</p>
+                        </div>
+                        <p class="weight title">Since I started at Clever-Touch Marketing</p>
                     </div>
                 </div>
             </div>
@@ -165,7 +230,7 @@
                     <img src="images\skifinal.png" alt="Ski images" class="ski">
                 </div>
                 <div class="one-half column">
-                        <i class="fas fa-snowflake fa-5x animated flip"></i>
+                    <i class="fas fa-snowflake fa-5x animated flip"></i>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero saepe neque veritatis
                     exercitationem autem. Molestiae ex laborum unde eum optio inventore. Reprehenderit quaerat quo
                     accusantium molestias perspiciatis nostrum corrupti laborum.
@@ -174,5 +239,36 @@
         </div>
     </div>
 </body>
+
+<script>
+
+    /*
+* Basic Count Up from Date and Time
+* Author: @guwii / guwii.com
+*/
+    window.onload = function () {
+        // Month,Day,Year,Hour,Minute,Second
+        upTime('sep,017,2018,00:00:00'); // ****** Change this line!
+    }
+    function upTime(countTo) {
+        now = new Date();
+        countTo = new Date(countTo);
+        difference = (now - countTo);
+
+        days = Math.floor(difference / (60 * 60 * 1000 * 24) * 1);
+        hours = Math.floor((difference % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000) * 1);
+        mins = Math.floor(((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) / (60 * 1000) * 1);
+        secs = Math.floor((((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000 * 1);
+
+        document.getElementById('days').firstChild.nodeValue = days;
+        document.getElementById('hours').firstChild.nodeValue = hours;
+        document.getElementById('minutes').firstChild.nodeValue = mins;
+        document.getElementById('seconds').firstChild.nodeValue = secs;
+
+        clearTimeout(upTime.to);
+        upTime.to = setTimeout(function () { upTime(countTo); }, 1000);
+    }
+
+</script>
 
 </html>
