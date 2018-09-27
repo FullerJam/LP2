@@ -67,13 +67,18 @@
 
     .section3 {
         height: 70vh;
-        padding: 35vh 0 7rem;
+        padding: 38vh 0 2vh;
         text-align: center;
     }
 
     .section4 {
         height: 70vh;
         padding: 20vh 0 35vh;
+    }
+    .section5 {
+        height: 70vh;
+        padding: 30vh 0 7rem;
+        align-items: center;
     }
 
     i {
@@ -196,6 +201,18 @@
     }
 </style>
 
+<style>
+    /*Show grid*/
+    .column{
+        border: 1px solid blue;
+    }
+
+    .row {
+        border:1px solid red;
+    }
+    */
+</style>
+
 <body>
 
     <div class="section hero">
@@ -271,7 +288,7 @@
 
     <div class="section4 orange">
         <div class="container">
-
+            
             <div class="row">
                 <div class="one-fourth column">
                     <h1 class="weight">You might not have known..</h4>
@@ -303,8 +320,20 @@
             </div>
         </div>
     </div>
-</body>
+        <div class="section5">
+        <div class="container">
 
+            <div class="row">
+                <div class="column">
+                     <video muted id="video-elem"  autoplay="true" loop="true" src="zellswitch3.mp4"></video> 
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script>
 
     /*
@@ -313,7 +342,7 @@
 */
     window.onload = function () {
         // Month,Day,Year,Hour,Minute,Second
-        upTime('sep,017,2018,00:00:00'); // ****** Change this line!
+        upTime('sep,017,2018,00:00:00');
     }
     function upTime(countTo) {
         now = new Date();
@@ -334,48 +363,12 @@
         upTime.to = setTimeout(function () { upTime(countTo); }, 1000);
     }
 
+    ScrollReveal().reveal('.column');
 
-    function onViewport(el, elClass, offset, callback) {
-        /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
-        var didScroll = false;
-        var this_top;
-        var height;
-        var top;
 
-        if (!offset) { var offset = 0; }
-
-        $(window).scroll(function () {
-            didScroll = true;
-        });
-
-        setInterval(function () {
-            if (didScroll) {
-                didScroll = false;
-                top = $(this).scrollTop();
-
-                $(el).each(function (i) {
-                    this_top = $(this).offset().top - offset;
-                    height = $(this).height();
-
-                    // Scrolled within current section
-                    if (top >= this_top && !$(this).hasClass(elClass)) {
-                        $(this).addClass(elClass);
-
-                        if (typeof callback == "function") callback(el);
-                    }
-                });
-            }
-        }, 100);
-    }
-
-    // Call the function with the following parameters:
-    onViewport(selector, classNameToBeAdded, offset, callback);
-
-    // Example:
-    onViewport(".animated", "active", 300, function () {
-        console.log("This is not a drill.")
-    });
 
 </script>
+
+
 
 </html>
