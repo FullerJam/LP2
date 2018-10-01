@@ -1,26 +1,18 @@
 body {
     transition: ease;
+    margin:0;
 }
 
 .hero {
-    background-color: yellow;
-}
-
-.pink {
-    background-color: pink;
+    background-color:#2AD179;
 }
 
 .blue {
-    background-color: teal;
+    background-color: #73bfb8;
 }
 
-.orange {
-    background-image: url("https://images.pexels.com/photos/238619/pexels-photo-238619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-
-}
-
-.orange {
-    color: #222233;
+.pink {
+    background-color: #3da5d9;
 }
 
 .title {
@@ -36,41 +28,74 @@ body {
 }
 
 .section {
-    height: 70vh;
+    height: 100vh;
     padding: 30vh 0 7rem;
     text-align: center;
 }
 
 .section2 {
-    height: 70vh;
+    height: 100vh;
     padding: 35vh 0 7rem;
     text-align: center;
     color: white;
 }
 
 .section3 {
-    height: 70vh;
+    height: 100vh;
     padding: 38vh 0 2vh;
     text-align: center;
 }
 
 .section4 {
-    height: 70vh;
+    height: 100vh;
     padding: 20vh 0 35vh;
 }
 .section5 {
-    height: 70vh;
-    align-items: center;
+    height:100vh;
+    position: relative;
+    height: 100%;
 }
-.alpha5 {
-    height: 70vh;
-    align-items: center;
-    background:red;
-    z-index: 1;
-}
+
 
 i {
     padding-right: 10px;
+}
+
+.caption{
+    width: 80%; 
+    height:40%; 
+    position: absolute; 
+    z-index: 2;
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:2rem;
+    text-align:center;
+}
+
+.caption ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align:center;
+}
+
+.videoDiv{
+    width:100%;
+    height:100%;
+    display:flex; /*find out what this is doing*/
+    justify-content: center;
+    align-items:center;
+    margin:0 auto;
+}
+.shader{
+    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
+    width:100%;
+    height:100%;
+    background: rgba(35,100,170,0.8);
+    z-index:1;
+    top:0;
+    left:0;
 }
 
 video{
@@ -82,18 +107,23 @@ video{
     width: auto;
     height: auto;
     z-index: -100;
-    
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+.resort ul {
+    padding-top:2rem;
 }
 
 .ski {
     max-height: 400px;
 }
 
-.weight {
+.bold {
     font-weight: 900;
 }
 
-.weight ul li {
+.bold ul li {
     list-style-type: square;
     padding: 0;
     margin: 0;
@@ -118,6 +148,29 @@ video{
 .mainimg {
     position: relative;
 }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* COUNTER STYLING */
+#countup {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#countup p {
+    display: inline-block;
+    padding: 10px;
+    background: #151515;
+    margin: 0 0 20px;
+    border-radius: 3px;
+    color: white;
+    min-width: 2.6rem;
+}
+
+/*MEDIA QUERIES*/
 
 @media (max-width: 1050px) {
     .fa-crown {
@@ -177,25 +230,4 @@ video{
     .fa-crown {
         left: 140px;
     }
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-/* COUNTER STYLING */
-#countup {
-    text-align: center;
-    font-size: 3rem;
-}
-
-#countup p {
-    display: inline-block;
-    padding: 10px;
-    background: #151515;
-    margin: 0 0 20px;
-    border-radius: 3px;
-    color: white;
-    min-width: 2.6rem;
 }
