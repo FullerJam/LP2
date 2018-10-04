@@ -1,0 +1,88 @@
+/* COUNTER STYLING */
+#countup {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#countup p {
+    display: inline-block;
+    padding: 10px;
+    background: #151515;
+    margin: 0 0 20px;
+    border-radius: 3px;
+    color: white;
+    min-width: 2.6rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1300px) {
+    #video{
+        display:none !important;
+    }
+    .bgImgReplace{
+        display:block !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    .fa-crown {
+        left: 220px;
+    }
+}
+
+@media (max-width: 950px) {
+    .fa-crown {
+        left: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .fa-crown {
+        left: 170px;
+    }
+}
+
+@media (max-width: 750px) {
+    .fa-crown {
+        left: 180px;
+    }
+}
+
+@media (max-width: 720px) {
+    .fa-crown {
+        left: 180px;
+    }
+}
+
+@media (max-width: 700px) {
+    .fa-crown {
+        left: 130px;
+    }
+}
+
+@media (max-width: 550px) {
+    .fa-crown {
+        left: 220px;
+    }
+}
+
+@media (max-width: 470px) {
+    .fa-crown {
+        left: 180px;
+    }
+}
+
+@media (max-width: 410px) {
+    .fa-crown {
+        left: 180px;
+    }
+}
+
+@media (max-width: 300px) {
+    .fa-crown {
+        left: 140px;
+    }
+}

@@ -39,7 +39,7 @@ gulp.task('minify', function(done){
 
 //Compile SASS
 gulp.task('sass', function(done){
-    gulp.src('src/sass/*.scss')
+   return gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'));
         done();

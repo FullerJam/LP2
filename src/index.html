@@ -11,25 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link href="css\my.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <title>Landing Page</title>
 </head>
-
-
-<style>
-    /*Show grid
-    .column{
-        border: 1px solid blue;
-    }
-
-    .row {
-        border:1px solid red;
-    }
-    .section{
-        border:4px solid purple;
-    }
-    */
-</style>
 
 <body>
 
@@ -39,7 +23,7 @@
             <div class="row">
                 <div class="one-half column mainpic">
                     <i class="fas fa-crown fa-5x"></i>
-                    <img src="images\Mask Group.png" alt="my face" class="hero-img animated delay-2s wobble">
+                    <img src="images\Mask Group.png" alt="my face" class="hero-img animated delay-1s wobble">
                 </div>
                 <div class="one-half column title">
                     <h1 class="animated slideInRight bold">James Fuller</h1>
@@ -57,19 +41,19 @@
 
             <div class="row">
                 <div class="one-fourth column">
-                    <h4>Familiar with a range of coding languages, frameworks, preprocessors and build tools</h4>
+                    <h4 class="bold title">Familiar with a range of coding languages, frameworks, preprocessors and build tools</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="one-fourth column languages">
                     <div class="container">
-                        <i class="fab fa-js fa-5x animated jello"></i>
-                        <i class="fab fa-css3-alt fa-5x animated jello"></i>
-                        <i class="fab fa-php fa-5x animated jello"></i>
-                        <i class="fab fa-sass fa-5x animated jello"></i>
-                        <i class="fab fa-gulp fa-5x animated jello"></i>
-                        <i class="fab fa-html5 fa-5x animated jello"></i>
-                        <i class="fab fa-vuejs fa-5x animated jello"></i>
+                        <i class="fab fa-js fa-5x"></i>
+                        <i class="fab fa-css3-alt fa-5x"></i>
+                        <i class="fab fa-php fa-5x"></i>
+                        <i class="fab fa-sass fa-5x"></i>
+                        <i class="fab fa-gulp fa-5x"></i>
+                        <i class="fab fa-html5 fa-5x"></i>
+                        <i class="fab fa-vuejs fa-5x"></i>
                     </div>
                 </div>
             </div>
@@ -81,7 +65,7 @@
 
             <div class="row">
                 <div class="one-fourth column">
-                    <h4 class="bold">It's Been</h4>
+                    <h4 class="bold title">It's Been</h4>
                 </div>
             </div>
             <div class="row">
@@ -107,44 +91,44 @@
 
     <div class="section5">
         <div class="videoDiv">
-            <video poster="images\poster.png" muted autoplay="true" loop="true">
+            <video id="video" muted autoplay="true" loop="true">
                 <source src="zellswitch3.mp4" type="video/mp4">
                 <source src="zellswitch3.webm" type="video/webm">
             </video>
+            <div class="bgImgReplace"></div>
             <div class="shader"></div>
-            <div class="caption">
+            <div class="caption row">
                 <h3>I'm fortunate enough to have skied three seasons working for various companies in the Alps,
-                    Rockies and Dolomites. <br>Resorts skied Include:</h3>
+                    Rockies and Dolomites</h3>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section2 blue">
+            <div class="container">
+    
                 <div class="row">
-                    <div class="one-half column resorts">
-                        <ul>
-                            <li>Courchevel</li>
-                            <li>Meribel</li>
-                            <li>Val Thoren</li>
-                            <li>Val Morel</li>
-                            <li>La Rosiere</li>
-                            <li>Pila</li>
-                            <li>La Thuile</li>
-                        </ul>
+                    <div class="one-fourth column">
+                        <h4 class="bold title">Reach Out</h4>
                     </div>
-                    <div class="one-half column resorts">
-                            <ul>
-                                <li>Courmayeur</li>
-                                <li>Lech</li>
-                                <li>Zell am See</li>
-                                <li>Banff</li>
-                                <li>Lake Louise</li>
-                                <li>Kicking Horse</li>
-                            </ul>
+                </div>
+                <div class="row">
+                    <div class="one-fourth column languages">
+                        <div class="container">
+                            <i class="fab fa-instagram fa-5x"><a href="https://www.instagram.com/fullerj4m/"></a></i>
+                            <i class="fab fa-linkedin fa-5x"><a href="https://www.linkedin.com/in/james-fuller-36318417/"></a></i>
+                            <i class="fab fa-github-square fa-5x"><a href="https://github.com/FullerJam"></a></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
     </div>
 </body>
 <script src="https://unpkg.com/scrollreveal"></script>
+<script src="..\js\main.js"></script>
 <script>
 
     /*
@@ -155,25 +139,6 @@
         // Month,Day,Year,Hour,Minute,Second
         upTime('sep,017,2018,00:00:00');
     }
-    function upTime(countTo) {
-        now = new Date();
-        countTo = new Date(countTo);
-        difference = (now - countTo);
-
-        days = Math.floor(difference / (60 * 60 * 1000 * 24) * 1);
-        hours = Math.floor((difference % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000) * 1);
-        mins = Math.floor(((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) / (60 * 1000) * 1);
-        secs = Math.floor((((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000 * 1);
-
-        document.getElementById('days').firstChild.nodeValue = days;
-        document.getElementById('hours').firstChild.nodeValue = hours;
-        document.getElementById('minutes').firstChild.nodeValue = mins;
-        document.getElementById('seconds').firstChild.nodeValue = secs;
-
-        clearTimeout(upTime.to);
-        upTime.to = setTimeout(function () { upTime(countTo); }, 1000);
-    }
-
     ScrollReveal().reveal('.column');
 
 

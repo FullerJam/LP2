@@ -8,24 +8,143 @@
     <link rel="stylesheet" href="css\skeleton.css">
     <link rel="stylesheet" href="css\normalize.css">
     <link rel="stylesheet" href="css\animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 
 <body>
+
     <div class="section hero">
         <div class="container">
+
             <div class="row">
-                <div class="one-half column">
-                    <h4 class="hero-heading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repudiandae impedit,
-                        accusantium tempore delectus ipsa culpa eligendi a sint libero in iure adipisci at, fugiat
-                        eveniet cum quaerat molestias fuga!
-                    </h4>
+                <div class="one-half column mainpic">
+                    <i class="fas fa-crown fa-5x"></i>
+                    <img src="images\Mask Group.png" alt="my face" class="hero-img animated delay-1s wobble">
+                </div>
+                <div class="one-half column title">
+                    <h1 class="animated slideInRight bold">James Fuller</h1>
+                    <h2>Technology Consultant Developerscreen</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="section2 blue">
+        <div class="container">
+
+            <div class="row">
+                <div class="one-fourth column">
+                    <h4 class="bold title">Familiar with a range of coding languages, frameworks, preprocessors and build tools</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="one-fourth column languages">
+                    <div class="container">
+                        <i class="fab fa-js fa-5x"></i>
+                        <i class="fab fa-css3-alt fa-5x"></i>
+                        <i class="fab fa-php fa-5x"></i>
+                        <i class="fab fa-sass fa-5x"></i>
+                        <i class="fab fa-gulp fa-5x"></i>
+                        <i class="fab fa-html5 fa-5x"></i>
+                        <i class="fab fa-vuejs fa-5x"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="section3 pink">
+        <div class="container">
+
+            <div class="row">
+                <div class="one-fourth column">
+                    <h4 class="bold title">It's Been</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="one-fourth column">
+                    <div class="container">
+                        <div id="countup">
+                            <p id="days">00</p>
+                            <p class="timeRefDays">days</p>
+                            <p id="hours">00</p>
+                            <p class="timeRefHours">hours</p>
+                            <p id="minutes">00</p>
+                            <p class="timeRefMinutes">minutes</p>
+                            <p id="seconds">00</p>
+                            <p class="timeRefSeconds">seconds</p>
+                        </div>
+                        <p class="title bold">Since I started at Clever-Touch Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section5">
+        <div class="videoDiv">
+            <video id="video" muted autoplay="true" loop="true">
+                <source src="zellswitch3.mp4" type="video/mp4">
+                <source src="zellswitch3.webm" type="video/webm">
+            </video>
+            <div class="bgImgReplace"></div>
+            <div class="shader"></div>
+            <div class="caption row">
+                <h3>I'm fortunate enough to have skied three seasons working for various companies in the Alps,
+                    Rockies and Dolomites</h3>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section2 blue">
+            <div class="container">
+    
+                <div class="row">
+                    <div class="one-fourth column">
+                        <h4 class="bold title">Reach Out</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-fourth column languages">
+                        <div class="container">
+                            <i class="fab fa-instagram fa-5x"><a href="https://www.instagram.com/fullerj4m/"></a></i>
+                            <i class="fab fa-linkedin fa-5x"><a href="https://www.linkedin.com/in/james-fuller-36318417/"></a></i>
+                            <i class="fab fa-github-square fa-5x"><a href="https://github.com/FullerJam"></a></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="..\js\main.js"></script>
+<script>
+
+    /*
+* Basic Count Up from Date and Time
+* Author: @guwii / guwii.com
+*/
+    window.onload = function () {
+        // Month,Day,Year,Hour,Minute,Second
+        upTime('sep,017,2018,00:00:00');
+    }
+    ScrollReveal().reveal('.column');
+
+
+
+</script>
+
+
 
 </html>
